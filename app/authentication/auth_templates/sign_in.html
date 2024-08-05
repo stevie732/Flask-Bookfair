@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light">
+    <div class="col-11 col-sm-8 col-md-6 col-lg-4">
+        <div class="card border-0 shadow-lg">
+            <div class="card-header bg-primary text-white text-center py-4">
+                <h2 class="mb-0 font-weight-bold">Welcome Back</h2>
+            </div>
+            <div class="card-body p-5">
+                <h4 class="card-title text-center mb-4 text-primary">Sign In to Your Account</h4>
+                {% include 'forms.html' %}
+                <div class="d-grid mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                        <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                    </button>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="#" class="text-decoration-none text-muted">Forgot password?</a>
+                </div>
+            </div>
+            <div class="card-footer bg-white text-center py-3">
+                <p class="mb-0">Don't have an account? <a href="#" class="fw-bold text-primary">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

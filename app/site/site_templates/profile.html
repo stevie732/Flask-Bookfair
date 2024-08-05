@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card mb-4 bg-light">
+                <div class="card-body text-center">
+                    <img src="../../static/images/books.jpg" alt="avatar" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5 class="my-3">{{ current_user.email }}</h5>
+                    <p class="text-muted mb-1">Book Fair Member</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ current_user.email }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Member ID</p> </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{ current_user.member_id }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h6 class="mb-4">Book Club Status</h6>
+                            <p class="mb-1">Books Currently Borrowed</p>
+                            <div class="bg-light rounded p-2">
+                                <div class="bg-primary rounded" style="width: 80%; height: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4 mb-md-0">
+                        <div class="card-body">
+                            <h6 class="mb-4">Reading History</h6>
+                            <p class="mb-1">Total Books Read</p>
+                            <div class="bg-light rounded p-2">
+                                <div class="bg-primary rounded" style="width: 55%; height: 5px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
